@@ -21,7 +21,7 @@ const Dashboard: React.FC = () => {
     const storagedRepositories = localStorage.getItem(
       '@GithubExplorer:repositories',
     );
-    if (storagedRepositories) return JSON.parse(storagedRepositories);
+    return storagedRepositories ? JSON.parse(storagedRepositories) : [];
   });
 
   useEffect(() => {
